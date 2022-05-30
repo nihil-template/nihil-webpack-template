@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/images/*": [
+        "./src/images/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/data/*": [
+        "./src/data/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "./node_modules",
+    "./build",
+  ]
+}
