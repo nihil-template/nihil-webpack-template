@@ -1,1 +1,0 @@
-(()=>{"use strict";let t="JavaScript";const e=document.getElementById("hello");e.textContent=`Hello ${t}!!`,document.querySelector("button").addEventListener("click",(n=>{n.preventDefault(),"JavaScript"===t?(t="TypeScript",e.textContent=`Hello ${t}!!`):(t="JavaScript",e.textContent=`Hello ${t}!!`)}))})();

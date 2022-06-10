@@ -1,6 +1,8 @@
 import path from 'path';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { Configuration } from 'webpack';
 
 const config: Configuration = {
@@ -50,12 +52,16 @@ const config: Configuration = {
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
+    }),
     new MiniCssExtractPlugin(),
+    new CleanWebpackPlugin(),
   ],
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/build',
+    publicPath: './',
   },
 };
 
